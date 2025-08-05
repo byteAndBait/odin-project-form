@@ -8,3 +8,130 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 100vh;
+    height: 100dvh;
+    font-family: system-ui, sans-serif;
+}
+/* Layout Styling */
+
+.container{
+    width:100vw;
+    min-height: 100vh;
+    background-color: #eee;
+    display: flex;
+}
+/* left side background */
+.container .sideBackground{
+    width:90%;
+    background-image: url("assets/background.jpeg") ;
+    background-repeat: repeat;
+    animation: backgroundAnimation 100s infinite both linear;
+}
+.container .sideBackground .logo{
+    display:flex;
+    margin-top: 2.5em;
+    align-items:center;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
+    opacity: .7;
+    position: relative;
+    width:100%;
+    color:white;
+    font-size: 4.3rem;
+    font-family: "Norse";
+    img{
+        max-width: 100px;
+    }
+}
+
+
+/* Form and Content */
+.content .text{
+    font-size: 1.4rem;
+    font-weight: bold;
+    span{
+        display:block;
+        margin-top:1em;
+    }
+    padding: 0 2em;
+    padding-top: 5em;
+
+}
+.content form{
+    margin-top: 2em;
+    background-color: white;
+    padding: 2em 3em;
+    box-shadow: 0 8px 10px #B6B6B6;
+}
+.content form h1{
+    margin-bottom: 1em;
+}
+.content form .flex-parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.content form .form-group{
+    width:300px;
+    max-width: 100%;
+}
+.content form input{
+    width:80%;
+    border-radius: 5px;
+    border:solid 1px var(--input-default-border-color);
+    padding: 8px;
+    transition: .6s ease;
+    outline: transparent;
+}
+.content form input:user-invalid{
+    border: solid 1px red;
+}
+.content form input:focus{
+    border: solid 1px blue;
+    box-shadow: 0 5px 8px #eee;
+}
+.content form input:user-valid{
+    border: solid 1px var(--primary-color);
+
+}
+.content form label{
+    display: block;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+}
+.content form h1{
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+
+.container button{
+    display: block;
+    margin: 2em;
+    padding: 15px 45px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    border:none;
+        box-shadow: 0 10px 10px #ddd;
+}
+@keyframes backgroundAnimation {
+    0% {
+    background-position: 0 0;
+  }
+  100%{
+background-position: -400% 0px;
+  }
+}
+.container span.have-an-account{
+    margin: 1em 2em;
+    a{
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+}
