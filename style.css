@@ -85,6 +85,7 @@ body{
     transition: .6s ease;
     outline: transparent;
 }
+.content form input[type="password"]:invalid,
 .content form input:user-invalid{
     border: solid 1px red;
 }
@@ -120,11 +121,8 @@ body{
         box-shadow: 0 10px 10px #ddd;
 }
 @keyframes backgroundAnimation {
-    0% {
-    background-position: 0 0;
-  }
   100%{
-background-position: -400% 0px;
+    background-position: -400% 0px;
   }
 }
 .container span.have-an-account{
