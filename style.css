@@ -1,0 +1,10 @@
+:root{
+    --primary-color: #596D48;
+    --input-default-border-color : #E5E7EB;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
